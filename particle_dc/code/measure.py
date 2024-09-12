@@ -36,8 +36,6 @@ import time
 import importlib
 import zmq
 
-import calculate as calc
-
 logger = logging.getLogger("main.measure")
 context = zmq.Context()
 
@@ -87,8 +85,6 @@ class AirParticleMeasureBuildingBlock(multiprocessing.Process):
             return
 
         adc = adc_module.ADC(self.config)
-
-        calculation = calc.AirParticleMonitoringCalculation(self.config)
 
         sleep_time = period
         t = time.time()
