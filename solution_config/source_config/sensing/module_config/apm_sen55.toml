@@ -50,7 +50,7 @@
 
 #=-= Define Output Specification =-=
 [output.overall]
-    topic = "airquality_monitoring/{{machine}}"
+    topic = "air_particle_monitoring/{{machine}}"
 [output.overall.message_spec]
     timestamp = '$.timestamp'
     mc_1p0 = "$.mc_1p0"
