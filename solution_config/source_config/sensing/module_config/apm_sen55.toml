@@ -39,10 +39,9 @@
 #=-= Define Measurements Pipelines =-=
 [measurement]
     module="gen_sample"
-    class="SingleSampleAvg"
+    class="SingleSample"
 [measurement.config]
-    period = 1.0 # seconds
-    n_samples = 5
+    period = 2.0 # seconds. SEN55 makes data available every second. Allow some margin or it will throw a lot of "data not ready" errors.
 [[measurement.sensing_stacks]]
     device = "air_particle_sensor"
     pipeline = "pipeline"
