@@ -12,14 +12,14 @@
     class="SEN55"
     interface="i2c0"
 [device.air_particle_sensor.variables]      # This section is required by schema.
-    PM1_var = mc_1p0                       # Although there are many values here and they are the same as the defaults,
-    PM2.5_var = mc_2p5                     # explicitly showing them makes clear the connection with [output.overall.message_spec]
-    PM4_var = mc_4p0
-    PM10_var = mc_10p0
-    voc_var = voc_index
-    nox_var = nox_index
-    temperature_var = ambient_t
-    relative_humidity_var = ambient_rh
+    PM1_var = "mc_1p0"                       # Although there are many values here and they are the same as the defaults,
+    PM2.5_var = "mc_2p5"                     # explicitly showing them makes clear the connection with [output.overall.message_spec]
+    PM4_var = "mc_4p0"
+    PM10_var = "mc_10p0"
+    voc_var = "voc_index"
+    nox_var = "nox_index"
+    temperature_var = "ambient_t"
+    relative_humidity_var = "ambient_rh"
 
 
 #=-= Define Calculation Modules =-=
@@ -59,9 +59,9 @@
     mc_10p0 = "$.mc_10p0"
     voc_index = "$.voc_index"
     nox_index = "$.nox_index"
-    ambient_t "$.ambient_t"
+    ambient_t = "$.ambient_t"
     ambient_rh = "$.ambient_rh"
-    machine="$.machine"
+    machine = "$.machine"
 
 [mqtt]
     broker = "mqtt.docker.local"
